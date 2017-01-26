@@ -11,19 +11,22 @@ class ItemPanel extends Component {
         <div className="panel-body item-body">
           <img src={this.props.img} />
           <div className="time-left">
-            {this.props.timeLeft}
+            00:00:{this.props.timeLeft}
           </div>
           <div className="dollar-amount">
-            {this.props.dollarAmount}
+            ${(this.props.dollarAmount/100).toFixed(2)}
           </div>
           <div className="user">
             {this.props.user}
           </div>
-          <button className="btn btn-warning">Bid now</button>
+          <button className="btn btn-warning"
+                  onClick={(e) => this.props.bid(this.props.index)}>
+            Bid now
+          </button>
         </div>
       </div>
     )
   }
 }
 
-export default ItemPanel
+export default ItemPanel;
