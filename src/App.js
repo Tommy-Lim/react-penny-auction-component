@@ -182,7 +182,7 @@ class App extends Component {
               <button className="btn btn-warning">Bid now</button>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
     );
   }
